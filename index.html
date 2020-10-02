@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PACMAN</title>
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+		</style>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+	</head>
+	<body onload="controls_manager();" class="d-flex flex-column h-100">
+		<header>
+			<!-- Fixed navbar -->
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+				<a class="navbar-brand title" href="#">PacMan</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/">NewGame</a>
+						</li>
+					</ul>
+					<form class="form-inline mt-2 mt-md-0">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item life">
+								<a class="nav-link" href="#"><i class='blinky'></i></a>
+							</li>
+							<li class="nav-item life">
+								<a class="nav-link" href="#"><i class='blinky blinky-pink'></i></a>
+							</li>
+							<li class="nav-item life">
+								<a class="nav-link" href="#"><i class='blinky blinky-yellow'></i></a>
+							</li>
+							<li class="nav-item life">
+								<a class="nav-link" href="#"><i class='blinky blinky-blue'></i></a>
+							</li>
+							<li class="nav-item life">
+								<a class="nav-link" href="#"><i class='blinky blinky-green'></i></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Score: <span id="score_value">0</span></a>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Begin page content -->
+		<main role="main" class="flex-shrink-0">
+			<div class="light_gui"></div>
+			<section id="loading-screen">
+				<h1 class="title_load">PacMAN</h1>
+
+				<div id="loader">
+					<div class="btn-block">
+						<a href="#"><i class='pac-man btn-block'></i></a>
+					</div>
+					<div class="btn">
+						<a href="#"><i class='blinky blinky-yellow btn-block'></i></a>
+					</div>
+					<div class="btn">
+						<a href="#"><i class='blinky blinky-green btn-block'></i></a>
+					</div>
+					<div class="btn">
+						<a href="#"><i class='blinky blinky-blue btn-block'></i></a>
+					</div>
+					<div class="btn">
+						<a href="#"><i class='blinky blinky-red btn-block'></i></a>
+					</div>
+					<div class="btn">
+						<a href="#"><i class='blinky blinky-pink btn-block'></i></a>
+					</div>
+				</div>
+			</section>
+			<div class="container">
+				<div id="border_screen">
+					<div id="pacman_draw"></div>
+				</div>
+			</div>
+			<div class="subtitle_load">
+				<p>Created by: Maxime Hutinet, David Laroche, Jose Goncalves</p>
+			</div>
+			<div class="modal fade" id="modal-game" tabindex="-1" role="dialog" aria-hidden="true">
+		    <div class="modal-dialog" role="document" id="modal-container">
+		      <div class="modal-content">
+		        <div class="modal-body"></div>
+		      </div>
+		    </div>
+		  </div>
+		</main>
+
+		<!-- Boostrap -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/lib/jquery.slim.min.js"><\/script>')</script>
+
+		<!-- Pacman -->
+		<script src="js/lib/three.js"></script>
+		<script type="text/javascript" src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+		<script type="text/javascript" src="https://threejs.org/examples/js/libs/dat.gui.min.js"></script>
+		<script src="js/lib/GLTFLoader.js"></script>
+
+		<script src="js/pacman_lib/GUI.js"></script>
+		<script src="js/pacman_lib/models.js"></script>
+		<script src="js/pacman_lib/audio.js"></script>
+		<script src="js/pacman_lib/controls.js"></script>
+		<script src="js/pacman.js"></script>
+	</body>
+</html>

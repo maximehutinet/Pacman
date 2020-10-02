@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'Blox';
+    src: url('../fonts/Blox2.ttf');
+}
+
+body {
+    font-family: Monospace;
+    background-color: #fff;
+    background-repeat: repeat;
+    background-image: url('../img/pacman_pattern.png');
+    margin: 0px;
+    overflow: hidden;
+}
+
+main > .container {
+    padding: 60px 15px 0;
+}
+
+code {
+    font-size: 80%;
+}
+
+/** GUI **/
+div.light_gui {
+    top: 50px;
+}
+.title {
+    font-family: 'Blox', 'Georgia', serif;
+}
+/** Phantom + pacman **************************************************************/
+.pac-man {
+    background-image: -webkit-linear-gradient(45deg, #ffff57 50%, transparent 50%),
+    -webkit-linear-gradient(-45deg, #ffff57 50%, transparent 50%);
+    border-radius: 100%;
+    display: block;
+    height: .8em;
+    margin: -.5em;
+    position: absolute;
+    width: .8em;
+    -webkit-animation: pacman .4s steps(1, end) infinite,
+    move-pacman 20s 2s steps(4, end) both;
+}
+
+.blinky {
+    background-image: -webkit-linear-gradient(45deg, transparent 50%, #ff5703 50%),
+    -webkit-linear-gradient(135deg, transparent 50%, #ff5703 50%),
+    -webkit-linear-gradient(#ff5703, #ff5703),
+    -webkit-radial-gradient(56% 60%, circle, transparent 30%, #ff5703 30%),
+    -webkit-radial-gradient(44% 60%, circle, transparent 30%, #ff5703 30%);
+    background-position: 100% 100%, 100% 100%, 50% 75%, 5% 0, 95% 0;
+    background-repeat: repeat-x, repeat-x, repeat-x, no-repeat, no-repeat;
+    background-size: .25em .25em, .25em .25em, .25em .25em, .5em .5em, .5em .5em;
+    border-radius: 100% 100% 0 0;
+    display: block;
+    height: .8em;
+    margin:0  -1.5em;
+    position: absolute;
+    top: 40%;
+    width: .8em;
+}
+
+.blinky-red {
+    background-image: -webkit-linear-gradient(45deg, transparent 50%, #ff0007 50%),
+    -webkit-linear-gradient(135deg, transparent 50%, #ff0007 50%),
+    -webkit-linear-gradient(#ff0007, #ff0007),
+    -webkit-radial-gradient(56% 60%, circle, transparent 30%, #ff0007 30%),
+    -webkit-radial-gradient(44% 60%, circle, transparent 30%, #ff0007 30%);
+}
+
+.blinky-blue {
+    background-image: -webkit-linear-gradient(45deg, transparent 50%, #26b0eb 50%),
+    -webkit-linear-gradient(135deg, transparent 50%, #26b0eb 50%),
+    -webkit-linear-gradient(#26b0eb, #26b0eb),
+    -webkit-radial-gradient(56% 60%, circle, transparent 30%, #26b0eb 30%),
+    -webkit-radial-gradient(44% 60%, circle, transparent 30%, #26b0eb 30%);
+}
+
+.blinky-green {
+    background-image: -webkit-linear-gradient(45deg, transparent 50%, #b5e61d 50%),
+    -webkit-linear-gradient(135deg, transparent 50%, #b5e61d 50%),
+    -webkit-linear-gradient(#b5e61d, #b5e61d),
+    -webkit-radial-gradient(56% 60%, circle, transparent 30%, #b5e61d 30%),
+    -webkit-radial-gradient(44% 60%, circle, transparent 30%, #b5e61d 30%);
+}
+
+.blinky-yellow {
+    background-image: -webkit-linear-gradient(45deg, transparent 50%, #fff200 50%),
+    -webkit-linear-gradient(135deg, transparent 50%, #fff200 50%),
+    -webkit-linear-gradient(#fff200, #fff200),
+    -webkit-radial-gradient(56% 60%, circle, transparent 30%, #fff200 30%),
+    -webkit-radial-gradient(44% 60%, circle, transparent 30%, #fff200 30%);
+}
+
+.blinky-pink {
+    background-image: -webkit-linear-gradient(45deg, transparent 50%, #ffaec9 50%),
+    -webkit-linear-gradient(135deg, transparent 50%, #ffaec9 50%),
+    -webkit-linear-gradient(#ffaec9, #ffaec9),
+    -webkit-radial-gradient(56% 60%, circle, transparent 30%, #ffaec9 30%),
+    -webkit-radial-gradient(44% 60%, circle, transparent 30%, #ffaec9 30%);
+}
+
+#animation {
+    text-align: center;
+    z-index: 2;
+}
+#animation blinky {
+    text-align: center;
+    -webkit-animation: blinky .8s steps(4, end)  infinite,
+    move-blinky 20s 2s steps(4, end) both;
+}
+@-webkit-keyframes blinky {
+    100% { background-position: 0 100%, 0 100%, 50% 75%, 5% 0, 95% 0; }
+}
+
+@-webkit-keyframes move-blinky {
+    2% { right: 5.75em; top: 6em; }
+    4% { right: 7.5em; top: 6em; }
+    6% { right: 5.75em; top: 6em; }
+    8% { right: 7.5em; top: 6em; }
+    10% { right: 5.75em; top: 6em; }
+    12% { right: 7.5em; top: 6em; }
+    14% { right: 5.75em; top: 6em; }
+    16% { right: 7.5em; top: 6em; }
+    18% { right: 5.75em; top: 6em; }
+    20% { right: 7.5em; top: 6em; }
+    22% { right: 5.75em; top: 6em; }
+    24% { right: 7.5em; top: 6em; }
+    26% { right: 5.75em; top: 6em; }
+    28% { right: 7.5em; top: 6em; }
+    30% { right: 5.75em; top: 6em; }
+    32% { right: 7.5em; top: 6em; }
+    34% { right: 5.75em; top: 6em; }
+    36% { right: 7.5em; top: 6em; }
+    38% { right: 5.75em; top: 6em; }
+    40% { right: 7.5em; top: 6em; }
+    42% { right: 5.75em; top: 6em; }
+    44% { right: 7.5em; top: 6em; }
+    46% { right: 5.75em; top: 6em; }
+    48% { right: 7.5em; top: 6em; }
+    50% { right: 7.5em; top: 4.25em; }
+    52% { right: 7.5em; top: 2.5em; }
+    54% { right: 7.5em; top: .75em; }
+    56% { right: 9.25em; top: .75em; }
+    58% { right: 11em; top: .75em; }
+    60% { right: 11em; top: 2.5em; }
+    62% { right: 11em; top: 4.25em; }
+    64% { right: 9.25em; top: 4.25em; }
+    66% { right: 9.25em; top: 6em; }
+    68% { right: 9.25em; top: 7.75em; }
+    70% { right: 7.5em; top: 7.75em; }
+    72% { right: 5.75em; top: 7.75em; }
+    74% { right: 4em; top: 7.75em; }
+    76% { right: 4em; top: 6em; }
+    78% { right: 4em; top: 4.25em; }
+    80% { right: 2.25em; top: 4.25em; }
+    82% { right: 4em; top: 4.25em; }
+    84% { right: 4em; top: 2.5em; }
+    86% { right: 5.75em; top: 2.5em; }
+    88% { right: 7.5em; top: 2.5em; }
+    90% { right: 9.25em; top: 2.5em; opacity: 1; }
+    92% { right: 9.25em; top: 2.5em; opacity: 0; }
+    94% { right: 9.25em; top: 2.5em; opacity: 0; }
+    96% { right: 9.25em; top: 2.5em; opacity: 0; }
+    98% { right: 9.25em; top: 2.5em; opacity: 0; }
+    100% { right: 9.25em; top: 2.5em; opacity: 0; }
+}
+
+#animation @-webkit-keyframes pacman {
+    50% { background-color: #ffff57; }
+}
+
+#animation @-webkit-keyframes move-pacman {
+    2% { right: 3em;}
+    4% { right: 4.75em; }
+    6% { right: 4.75em; }
+    8% { right: 3em; }
+    10% { right: 3em; }
+    12% { right: 1.25em;  }
+    14% { right: 1.25em; }
+    16% { right: 1.25em;  }
+    18% { right: 3em;}
+    20% { right: 4.75em;  }
+    22% { right: 4.75em;  }
+    24% { right: 6.5em; }
+    26% { right: 6.5em; }
+    28% { right: 8.25em;}
+    30% { right: 10em;  }
+    32% { right: 10em; }
+    34% { right: 10em; }
+    36% { right: 8.25em; }
+    38% { right: 8.25em; }
+    40% { right: 8.25em; }
+    42% { right: 8.25em; }
+    44% { right: 8.25em;  }
+    46% { right: 6.5em; }
+    48% { right: 6.5em;}
+    50% { right: 8.25em; }
+    52% { right: 10em;  }
+    54% { right: 10em;  }
+    56% { right: 10em; }
+    58% { right: 8.25em;  }
+    60% { right: 8.25em;  }
+    62% { right: 8.25em; ; }
+    64% { right: 6.5em;  }
+    66% { right: 4.75em;  }
+    68% { right: 3em; }
+    70% { right: 3em;  }
+    72% { right: 3em;  }
+    74% { right: 1.25em;  }
+    76% { right: 1.25em; }
+    78% { right: 1.25em;  }
+    80% { right: 3em;  }
+    82% { right: 4.75em;  }
+    84% { right: 4.75em;  }
+    86% { right: 6.5em;  }
+    88% { right: 8.25em;  }
+    90% { right: 8.25em;  }
+    92% { right: 8.25em;  opacity: 1; }
+    94% { right: 8.25em;  opacity: .5; }
+    96% { right: 8.25em; opacity: 0; }
+    98% { right: 8.25em;  opacity: 0; }
+    100% { right: 8.25em;  opacity: 0; }
+}
+
+/** GaneScreen ****************************************************************/
+#border_screen {
+    padding: 10px;
+    background: #e3cd0c;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#pacman_draw{
+    height: 100%;
+    width: 100%;
+    background: black;
+    text-align: center;
+    margin: 0 auto;
+    border: 10px solid transparent;
+    border-image: url('../img/ghost.png') 25 round;
+}
+
+
+/** Loading screen ************************************************************/
+#loading-screen {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    z-index: -1;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #db0033;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #d36716;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loading-screen .title_load{
+    top: 10%;
+    font-size: 10em;
+    font-family: 'Blox', 'Georgia', serif;
+    color: #e3cd0c;
+    content: "PacMan";
+    text-align: center;
+    margin-bottom: -20%;
+}
+
+.subtitle_load{
+    font-size: 1em;
+    font-family: 'Blox', 'Georgia', serif;
+    color: #e3cd0c;
+    text-align: center;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e3cd0c;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+    z-index: -1;
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.modal-body {
+  text-align: center !important;
+}
